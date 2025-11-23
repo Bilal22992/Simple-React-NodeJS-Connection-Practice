@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 const app = express();
-
+const data=["moon","bilal","Saad"];
 app.use(cors({
     origin:"http://localhost:3000",
     methods:"GET"
@@ -10,7 +10,7 @@ app.use(cors({
 
 app.get("/api",(req,res)=>{
 
-    res.send(["moon","bilal","Saad"])
+    res.send(data);
 })
 app.listen("5000",(req,res)=>{
 
